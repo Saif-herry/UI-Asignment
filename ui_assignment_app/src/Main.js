@@ -15,7 +15,10 @@ const Main = () => {
  }, [])
  console.log(data);
   return (
-    <div className='Container'>
+    <div className='parent'>
+        <div style={{width:"12%",height:"100%"}}>
+            
+        
         <div>
             <GiHamburgerMenu onClick={()=>settoggle(!toggle)}/>
         </div>
@@ -24,22 +27,27 @@ const Main = () => {
            {
             data.map(function(ele){
                 return(
-                    <div>
+                    <div >
                         <div className='card'>
                         <div><img style={{width:"80px"}} src={ele.icon} alt="" /></div>
                         
                         <div>{ele.title}</div>
                         
                         </div>
+                        
                     </div>
                 )
             })
            }
            </> 
         }
-        <div className='dash'>
-
         </div>
+        <div className='crd'>
+            <div id='bottom'>
+            <p>dashboard : : Endpoint</p>
+            </div>
+                            
+                        </div>
     </div>
   )
 }
